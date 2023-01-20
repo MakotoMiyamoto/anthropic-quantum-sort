@@ -18,7 +18,7 @@ private:
     template <typename C> static char test(typename C::iterator*);
     template <typename C> static int  test(...);
 public:
-    enum { value = sizeof(test<T>(0) == sizeof(char)) };
+    enum { value = sizeof(test<T>(0)) == sizeof(char) };
 };
 
 template <typename C>
