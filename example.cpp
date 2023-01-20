@@ -5,7 +5,7 @@
 
 int main() {
     auto vec = std::vector<int>{ 1, 2, 3, 4, 5 };
-    aqs(vec);
+    mk::aqs(vec);
 
     std::cout << "{ ";
     for (auto &&x : vec) { std::cout << x << " "; };

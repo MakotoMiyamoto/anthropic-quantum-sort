@@ -26,8 +26,10 @@ concept Iterable = requires(C) {
     has_iterator<C>::value;
 };
 
-template <Iterable Container>
-requires Comparable<typename Container::value_type>
-void aqs(Container &container) { }
+namespace mk {
+    template <Iterable Container>
+    requires Comparable<typename Container::value_type>
+    void aqs(Container &container) { }
+}
 
 #endif
